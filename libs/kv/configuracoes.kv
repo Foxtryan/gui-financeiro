@@ -1,0 +1,24 @@
+<Configuracoes>:
+
+    MDBackdrop:
+        id: backdrop
+        left_action_items: [['arrow-left', lambda x: root.parent.set_screen('main_screen')]]
+        title: "Configurações"
+        radius_left: "0dp"
+        radius_right: "0dp"
+        header_text: "Temas"
+        back_layer_color: app.theme_cls.accent_color
+
+        MDBackdropBackLayer:
+            MyBackdropBackLayer:
+                id: backlayer
+
+        MDBackdropFrontLayer:
+
+            Screen:
+                backdrop: backdrop
+
+                ScrollView:
+                    Label:
+                        text: "Tela Configurações"
+                        color: (.5,.5,.5,1)

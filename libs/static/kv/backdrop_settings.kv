@@ -1,0 +1,70 @@
+#:import Window kivy.core.window.Window
+#:import IconLeftWidget kivymd.uix.list.IconLeftWidget
+#:import Window kivy.core.window.Window
+#:import IconLeftWidget kivymd.uix.list.IconLeftWidget
+
+<MyBackdropBackLayer@FloatLayout>
+    scale_x: 0
+    scale_y: 0
+
+    Image:
+        opacity: .2
+        source: "data/logo/kivy-icon-512.png"
+        pos_hint: {"center_y": .55}
+
+    ScrollView:
+        MDGridLayout:
+            adaptive_height: True 
+            cols: 1
+            padding: "10dp"
+            spacing: "10dp"
+
+            MDBoxLayout:
+                orientation: "vertical"
+                adaptive_height: True 
+                padding: "5dp"
+                spacing: "10dp"
+
+                MDLabel:
+                    text: "Estilo:"
+                    bold: True
+                    theme_text_color: "Primary"
+
+                MDBoxLayout:
+                    size_hint: None, None
+                    adaptive_size: True
+                    spacing: "28dp"
+
+                    MyCheckbox:
+                        group: "estilo"
+                        on_active: if self.active: app.switch_theme_style()
+                    ILabel:
+                        text: "Claro"
+
+                    MyCheckbox:
+                        group: "estilo"
+                        on_active: if self.active: app.switch_theme_style()
+                    ILabel:
+                        text: "Escuro"
+
+            MDSeparator:
+
+            MDLabel:
+                id: label_theme
+                text: "Tema atual: {}".format(app.theme_cls.primary_palette)
+                bold: True
+                theme_text_color: "Primary"
+                adaptive_height: True
+
+            OneLineIconListItem:
+                text: "Mudar Tema"
+                divider: None
+                on_release: app.show_dialog_change_theme()
+                IconLeftWidget:
+                    icon: "palette-outline"
+
+            MDSeparator:
+            MDFlatButton:
+                text: "Fechar"
+                theme_text_color: "Primary"
+                on_press: root.parent.parent.parent.close()

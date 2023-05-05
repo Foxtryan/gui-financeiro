@@ -1,0 +1,19 @@
+## Change Theme Dialog:
+<MyCheckbox@MDCheckbox>:
+    size_hint: None, None
+    size: "48dp", "48dp"
+<ILabel@Label>:
+    color: app.theme_cls.text_color
+
+## APP
+
+<MDLabel@MDLabel>:
+    color: app.text_color
+
+
+<CustomMDCard@MDCard>:
+    padding: 4
+    size_hint: None, None
+    md_bg_color: app.theme_cls.accent_color
+    ripple_behavior: True
+    radius: dp(18),dp(18),dp(18),dp(18)

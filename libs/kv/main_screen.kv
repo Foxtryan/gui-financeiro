@@ -1,0 +1,36 @@
+<Main_Screen>:
+    BoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "EconoView"
+            #specific_text_color: app.theme_cls.accent_color
+            opposite_colors: True
+            md_bg_color: app.theme_cls.accent_color #"#3f489d"
+            right_action_items: [["cog", lambda x: root.parent.set_screen('configuracoes')], ["close", lambda x: app.stop()]]
+            #right_action_items: [["dots-vertical", lambda x: app.callback_1()], ["clock", lambda x: app.callback_2()]]
+
+
+        MDBottomNavigation:
+            id: nav_manager
+            panel_color: app.theme_cls.accent_color #"#3f489d"
+            selected_color_background: app.theme_cls.accent_color #"#3f489d"
+            text_color_active: app.text_color #"#f7f8f8"
+            text_color_normal: app.light_text_color #"#8c92d4"
+
+            MDBottomNavigationItem:
+                name: 'screen_um'
+                text: "Inicio"
+                icon: "home"
+                #badge_icon: 'numeric-10'
+
+                Menu:
+
+            MDBottomNavigationItem:
+                name: 'screen_dois'
+                text: "Vazio"
+                icon: "twitter"
+                #badge_icon: 'numeric-5'
+
+                MDLabel:
+                    text: "Vazio"
+                    halign: 'center'

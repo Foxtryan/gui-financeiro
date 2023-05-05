@@ -1,0 +1,27 @@
+#:import C kivy.utils.get_color_from_hex
+
+<PersoSpinnerOption@SpinnerOption>:
+    canvas:
+        Color:
+            rgba: app.theme_cls.primary_color
+        Line:
+            width: 1
+            rectangle: self.x, self.y, self.width, self.height
+
+    background_color: C("303030") if app.theme_cls.theme_style is "Dark" else C("FFFFFF")
+    background_normal: ""
+    color: app.theme_cls.text_color
+
+<PersoSpinner@Spinner>:
+    canvas:
+        Color:
+            rgba: app.theme_cls.primary_color
+        Line:
+            width: 1
+            rectangle: self.x, self.y, self.width, self.height
+
+    background_normal: ""
+    background_color: C("303030") if app.theme_cls.theme_style is "Dark" else C("FFFFFF")
+    background_down: ""
+    option_cls: Factory.get("PersoSpinnerOption")
+    color: app.theme_cls.text_color

@@ -1,0 +1,199 @@
+#:import Window kivy.core.window.Window
+
+<Menu>:
+
+    CustomBoxLayout:
+
+        ################# LEFT #################
+        CustomMDGridLayout:
+            cols: 1
+
+            CustomMDCard:
+                size: "285dp", "220dp"
+
+                MDRelativeLayout:
+                    md_bg_color: app.theme_cls.accent_color
+
+                    MDLabel:
+                        id: label
+                        text: "TESTE"
+                        adaptive_size: True
+                        color: app.text_color
+                        pos: "12dp", "12dp"
+                        bold: True
+
+            #################
+
+            CustomMDCard:
+                size: "285dp", "220dp"
+
+                MDRelativeLayout:
+                    md_bg_color: app.theme_cls.accent_color
+
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+                        theme_text_color: "Custom"
+                        text_color: app.text_color
+
+                    MDLabel:
+                        id: label
+                        text: "TESTE"
+                        adaptive_size: True
+                        color: app.text_color
+                        pos: "12dp", "12dp"
+                        bold: True
+
+
+        ################# CENTER #################
+        CustomMDGridLayout:
+            cols: 1
+
+            CustomMDCard:
+                size: "285dp", "115dp"
+
+                MDBoxLayout:
+                    md_bg_color: app.theme_cls.accent_color
+                    orientation: 'vertical'
+
+                    MDLabel:
+                        text: root.lbl_fluxo_titulo
+                        adaptive_size: True
+                        color: app.text_color
+                        bold: True
+                        size_hint: 1, .15
+                        pos_hint: {'center_x': .5, 'center_y': .5}
+
+                    CustomBoxLayout:
+                        md_bg_color: app.theme_cls.accent_color
+
+                        CustomBoxLayout:
+                            orientation: 'vertical'
+                            md_bg_color:app.theme_cls.accent_color
+                            MDLabel:
+                                font_style: 'Caption'
+                                bold: True
+                                text: "Entradas:" 
+                                size_hint_x: .9
+                                size_hint_y: .2
+                                pos_hint: {'center_x': .5, 'center_y': .5}
+                            MDProgressBar:
+                                radius: 8
+                                size_hint_x: .9
+                                size_hint_y: .1
+                                pos_hint: {'center_x': .5, 'center_y': .5}
+                                color: "#2e935f"
+                                value: root.progress_entradas
+
+                            MDLabel:
+                                font_style: 'Caption'
+                                bold: True
+                                text: "Saídas:"
+                                size_hint_x: .9
+                                size_hint_y: .2
+                                pos_hint: {'center_x': .5, 'center_y': .5}
+                            MDProgressBar:
+                                radius: 8
+                                size_hint_x: .9
+                                size_hint_y: .1
+                                pos_hint: {'center_x': .5, 'center_y': .5}
+                                color: "#b95820"
+                                value: root.progress_saidas
+
+                        #CustomBoxLayout:
+                            #orientation: 'vertical'
+                        MDFloatLayout:
+                            md_bg_color:app.theme_cls.accent_color
+                            size_hint_x: .6
+
+                            MDLabel:
+                                text: root.lbl_fluxo_total
+                                font_style: "H6"
+                                font_size: dp(28)
+                                bold: True
+                                pos_hint:{'x':.0, 'y':.0}
+                            MDLabel:
+                                text: "Caixa"
+                                font_style: "Overline"
+                                pos_hint:{'x':.0, 'y':-.3}
+
+            #################
+            CustomMDCard:
+                size: "285dp", "130dp"
+
+                MDRelativeLayout:
+                    md_bg_color: app.theme_cls.accent_color
+
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+                        theme_text_color: "Custom"
+                        text_color: app.text_color
+
+                    MDLabel:
+                        id: label
+                        text: "TESTE"
+                        adaptive_size: True
+                        color: app.text_color
+                        pos: "12dp", "12dp"
+                        bold: True
+
+            #################
+            CustomMDCard:
+                size: "285dp", "185dp"
+                MDRelativeLayout:
+                    md_bg_color: app.theme_cls.accent_color
+
+                    MDLabel:
+                        id: label
+                        text: "TESTE"
+                        adaptive_size: True
+                        color: app.text_color
+                        pos: "12dp", "12dp"
+                        bold: True
+
+        ################# RIGHT #################
+        CustomMDGridLayout:
+            cols: 1
+
+
+            CustomMDCard:
+                size: "285dp", "230dp"
+                MDRelativeLayout:
+                    md_bg_color: app.theme_cls.accent_color
+
+                    MDLabel:
+                        id: label
+                        text: "TESTE"
+                        adaptive_size: True
+                        color: app.text_color
+                        pos: "12dp", "12dp"
+                        bold: True
+
+
+            CustomMDCard:
+                size: "285dp", "100dp"
+                MDRelativeLayout:
+                    md_bg_color: app.theme_cls.accent_color
+
+                    MDLabel:
+                        id: label
+                        text: "TESTE"
+                        adaptive_size: True
+                        color: app.text_color
+                        pos: "12dp", "12dp"
+                        bold: True
+
+
+            CustomMDCard:
+                size: "285dp", "100dp"
+                MDRelativeLayout:
+                    md_bg_color: app.theme_cls.accent_color
+
+                    MDLabel:
+                        id: label
+                        text: "TESTE"
+                        adaptive_size: True
+                        color: app.text_color
+                        pos: "12dp", "12dp"
+                        bold: True
