@@ -1,4 +1,7 @@
 <Main_Screen>:
+
+    on_pre_enter: print(self.ids['screen_menu'].construir_cards())
+
     BoxLayout:
         orientation: 'vertical'
         MDTopAppBar:
@@ -18,12 +21,13 @@
             text_color_normal: app.light_text_color #"#8c92d4"
 
             MDBottomNavigationItem:
-                name: 'screen_um'
-                text: "Inicio"
+                name: 'menu'
+                text: "Menu"
                 icon: "home"
                 #badge_icon: 'numeric-10'
 
                 Menu:
+                    id: screen_menu
 
             MDBottomNavigationItem:
                 name: 'screen_dois'

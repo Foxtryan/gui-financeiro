@@ -6,8 +6,19 @@ BoxLayout:
     Interface:
 
 <Interface>:
+    TitleScreen:
+        name: 'title_screen'
     Main_Screen:
         name: 'main_screen'
     Configuracoes:
         name: 'configuracoes'
 
+
+<TitleScreen@Screen>:
+    CustomBoxLayout:
+
+        Button:
+            text: "ECONOVIEW"
+            background_normal: ""
+            background_color: app.theme_cls.accent_color
+            on_release: root.manager.set_screen('main_screen')

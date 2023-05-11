@@ -1,3 +1,4 @@
 #Python==3.7
-#kivy==2.2.dev0
+#kivy==2.2.doc0
 #kivymd==1.1.1
+#kivy-garden

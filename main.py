@@ -50,7 +50,7 @@ class FoxApp(MDApp):
         self.theme_cls.accent_hue = '900'
         self.theme_cls.accent_palette = "Indigo"
         self.text_color = "#f7f8f8"
-        self.light_text_color = "#8c92d4"
+        self.light_text_color = "#E6E6FA"  #"#8c92d4"
         self.custom_background_color = "#1b2168" #"#434880"
         #self.theme_cls.theme_style = "Dark"
 

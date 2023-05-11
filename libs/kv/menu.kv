@@ -3,27 +3,18 @@
 <Menu>:
 
     CustomBoxLayout:
-
         ################# LEFT #################
         CustomMDGridLayout:
             cols: 1
-
+            ###############
             CustomMDCard:
                 size: "285dp", "220dp"
 
-                MDRelativeLayout:
-                    md_bg_color: app.theme_cls.accent_color
+                BoxLayout:
+                    id: graph_gasto_mensal
+                    padding: 0,6,0,0
 
-                    MDLabel:
-                        id: label
-                        text: "TESTE"
-                        adaptive_size: True
-                        color: app.text_color
-                        pos: "12dp", "12dp"
-                        bold: True
-
-            #################
-
+            ###############
             CustomMDCard:
                 size: "285dp", "220dp"
 
@@ -35,34 +26,28 @@
                         pos_hint: {"top": 1, "right": 1}
                         theme_text_color: "Custom"
                         text_color: app.text_color
-
-                    MDLabel:
-                        id: label
-                        text: "TESTE"
-                        adaptive_size: True
-                        color: app.text_color
-                        pos: "12dp", "12dp"
-                        bold: True
+                        #on_press: 
 
 
         ################# CENTER #################
         CustomMDGridLayout:
             cols: 1
-
+            ###############
             CustomMDCard:
                 size: "285dp", "115dp"
 
                 MDBoxLayout:
                     md_bg_color: app.theme_cls.accent_color
                     orientation: 'vertical'
-
+                    padding: 0,10,0,0
                     MDLabel:
-                        text: root.lbl_fluxo_titulo
+                        
+                        text: "Fluxo de Caixa"
                         adaptive_size: True
                         color: app.text_color
                         bold: True
                         size_hint: 1, .15
-                        pos_hint: {'center_x': .5, 'center_y': .5}
+                        pos_hint: {'center_x': .5, 'center_y': .1}
 
                     CustomBoxLayout:
                         md_bg_color: app.theme_cls.accent_color
@@ -84,7 +69,6 @@
                                 pos_hint: {'center_x': .5, 'center_y': .5}
                                 color: "#2e935f"
                                 value: root.progress_entradas
-
                             MDLabel:
                                 font_style: 'Caption'
                                 bold: True
@@ -100,14 +84,14 @@
                                 color: "#b95820"
                                 value: root.progress_saidas
 
-                        #CustomBoxLayout:
-                            #orientation: 'vertical'
+
                         MDFloatLayout:
                             md_bg_color:app.theme_cls.accent_color
                             size_hint_x: .6
 
                             MDLabel:
-                                text: root.lbl_fluxo_total
+                                id: lbl_fluxo_caixa
+                                text: "0.00"
                                 font_style: "H6"
                                 font_size: dp(28)
                                 bold: True
@@ -117,7 +101,7 @@
                                 font_style: "Overline"
                                 pos_hint:{'x':.0, 'y':-.3}
 
-            #################
+            ###############
             CustomMDCard:
                 size: "285dp", "130dp"
 
@@ -156,7 +140,7 @@
         CustomMDGridLayout:
             cols: 1
 
-
+            ###############
             CustomMDCard:
                 size: "285dp", "230dp"
                 MDRelativeLayout:
@@ -170,7 +154,7 @@
                         pos: "12dp", "12dp"
                         bold: True
 
-
+            ###############
             CustomMDCard:
                 size: "285dp", "100dp"
                 MDRelativeLayout:
@@ -184,7 +168,7 @@
                         pos: "12dp", "12dp"
                         bold: True
 
-
+            ###############
             CustomMDCard:
                 size: "285dp", "100dp"
                 MDRelativeLayout:
