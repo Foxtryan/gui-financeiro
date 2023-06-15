@@ -1,0 +1,41 @@
+#:include views/homescreen/home.kv
+#:include views/testescreen/teste.kv
+
+<MenuScreen>:
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        MDTopAppBar:
+            title: "EconoView"
+            anchor_title: "left"
+            right_action_items: [["close", lambda x: app.stop()]]
+            specific_text_color: app.colors['text']
+            md_bg_color: app.colors['background']
+
+        MDBottomNavigation:
+            id: nav_manager
+            panel_color: app.colors['background']
+            selected_color_background: app.colors['selected']
+            text_color_active: app.colors['text']
+            text_color_normal: app.colors['text_off']
+            
+
+            HomeBottomNavigationItem:
+            CustomBottomNavigationItem:
+
+
+<HomeBottomNavigationItem>:
+    name: 'home'
+    text: "Home"
+    icon: "home"
+    #badge_icon: 'numeric-10'
+    HomeScreen:
+
+<CustomBottomNavigationItem>:
+    name: 'screen_dois'
+    text: "Vazio"
+    icon: "twitter"
+    #badge_icon: 'numeric-5'
+    #TesteScreen:
+            

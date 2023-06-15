@@ -1,0 +1,82 @@
+<CustomCard@MDCard>:
+    md_bg_color: app.colors['background']
+
+<CardLayout@MDBoxLayout>:
+    orientation: 'vertical'
+    md_bg_color: app.colors['background']
+    radius: dp(18),dp(18),dp(18),dp(18)
+    padding: 10, 10
+    spacing: 5
+
+<CardLabel@MDLabel>:
+    color: app.colors['text']
+
+<CardOne@CardLayout>:
+
+    MDLabel:
+        text: "Title"
+
+<CardTwo@CardLayout>:
+
+
+<CashFlow@CustomCard>:
+
+    CardLayout:
+
+        CardLabel:
+            text: "Fluxo de Caixa"
+            adaptive_size: True
+            bold: True
+            size_hint: 1, .15
+            pos_hint: {'center_x': .5, 'center_y': .1}
+
+        MDRelativeLayout:
+
+            CardLabel:
+                font_size: 14
+                text: "Entradas:" 
+                size_hint: .8, .12
+                pos_hint: {'center_x': .5, 'center_y': .8}
+
+            MDProgressBar:
+                radius: 8
+                size_hint_y: .1
+                color: "#2e935f"
+                size_hint: .8, .12
+                pos_hint: {'x': 0.1, 'center_y': .6}
+                #value: root.progress_entradas
+                value: 50
+
+            CardLabel:
+                font_size: 14
+                text: "Saídas:"
+                size_hint: .8, .12
+                pos_hint: {'center_x': .5, 'center_y': .4}
+                
+            MDProgressBar:
+                radius: 8
+                size_hint_y: .1
+                color: "#b95820"
+                size_hint: .8, .12
+                pos_hint: {'x': 0.1, 'center_y': .2}
+                #value: root.progress_entradas
+                value: 50
+
+
+
+
+                # # md_bg_color:app.theme_cls.accent_color
+                # size_hint_x: .6
+
+                # MDLabel:
+                #     id: lbl_fluxo_caixa
+                #     text: "0.00"
+                #     font_style: "H6"
+                #     font_size: dp(28)
+                #     bold: True
+                #     pos_hint:{'x':.0, 'y':.0}
+                # MDLabel:
+                #     text: "Caixa"
+                #     font_style: "Overline"
+                #     pos_hint:{'x':.0, 'y':-.3}
+
