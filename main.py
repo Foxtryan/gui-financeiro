@@ -23,5 +23,6 @@ class Financeiro(MDApp):
         self.manager_screen.add_widget(self.manager_screen.create_screen("menu"))
         return self.manager_screen
 
+
 if __name__ == '__main__':
     Financeiro().run()
